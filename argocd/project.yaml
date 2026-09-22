@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: shopsphere
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: shopsphere-project
+    stage: "stage-10"
+spec:
+  description: "ShopSphere Enterprise Microservices Project"
+  sourceRepos:
+    - "https://github.com/vinodk11/shopsphere-gitops.git"
+    - "https://github.com/vinodk11/shopsphere-aws-scaling.git"
+    - "*"
+  destinations:
+    - namespace: "shopsphere-stage9"
+      server: "https://kubernetes.default.svc"
+    - namespace: "argocd"
+      server: "https://kubernetes.default.svc"
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+    - group: "elbv2.k8s.aws"
+      kind: TargetGroupBinding
+  namespaceResourceWhitelist:
+    - group: "apps"
+      kind: Deployment
+    - group: ""
+      kind: Service
+    - group: ""
+      kind: ConfigMap
+    - group: ""
+      kind: Secret
+    - group: ""
+      kind: ServiceAccount
+    - group: "autoscaling"
+      kind: HorizontalPodAutoscaler
+    - group: "elbv2.k8s.aws"
+      kind: TargetGroupBinding

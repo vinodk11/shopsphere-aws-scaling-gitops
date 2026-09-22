@@ -1,0 +1,47 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: frontend-service-tgb
+  namespace: shopsphere-stage9
+spec:
+  serviceRef:
+    name: frontend-service
+    port: 8080
+  targetType: instance
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-mono-tg/8ff87c4ea2a9db70
+---
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: product-service-tgb
+  namespace: shopsphere-stage9
+spec:
+  serviceRef:
+    name: product-service
+    port: 8081
+  targetType: instance
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-prod-tg/dfd40a0efd69e014
+---
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: order-service-tgb
+  namespace: shopsphere-stage9
+spec:
+  serviceRef:
+    name: order-service
+    port: 8082
+  targetType: instance
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-ord-tg/36517dc135945abb
+---
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: user-service-tgb
+  namespace: shopsphere-stage9
+spec:
+  serviceRef:
+    name: user-service
+    port: 8083
+  targetType: instance
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-user-tg/83ebdb895e585920

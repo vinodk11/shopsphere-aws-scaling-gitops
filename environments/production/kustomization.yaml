@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: shopsphere-stage9
+
+resources:
+  - ../../apps/frontend-service
+  - ../../apps/product-service
+  - ../../apps/order-service
+  - ../../apps/user-service
+  - app-config.yaml
+  - target-group-binding.yaml
+
+images:
+  - name: shopsphere-frontend
+    newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-frontend
+    newTag: v10.0-initial
+  - name: shopsphere-product
+    newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-product
+    newTag: v10.0-initial
+  - name: shopsphere-order
+    newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-order
+    newTag: v10.0-initial
+  - name: shopsphere-user
+    newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-user
+    newTag: v10.0-initial
