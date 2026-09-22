@@ -9,7 +9,7 @@ metadata:
 spec:
   description: "ShopSphere Enterprise Microservices Project"
   sourceRepos:
-    - "https://github.com/vinodk11/shopsphere-gitops.git"
+    - "https://github.com/vinodk11/shopsphere-aws-scaling-gitops.git"
     - "https://github.com/vinodk11/shopsphere-aws-scaling.git"
     - "*"
   destinations:

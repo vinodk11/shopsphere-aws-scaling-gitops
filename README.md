@@ -1,4 +1,4 @@
-# ShopSphere GitOps Repository (`shopsphere-gitops`)
+# ShopSphere GitOps Repository (`shopsphere-aws-scaling-gitops`)
 
 This repository is the single source of truth for the desired state of ShopSphere Kubernetes workloads running on Amazon EKS, continuously reconciled by **Argo CD** in **Stage 10**.
 
@@ -15,7 +15,7 @@ Jenkins CI Pipeline (Build, Test, SAST, SCA, Trivy Container Scan, Push to ECR)
      ↓
 Jenkins GitOps Bot commits new image tag to this repository
      ↓
-shopsphere-gitops (environments/production/kustomization.yaml)
+shopsphere-aws-scaling-gitops (environments/production/kustomization.yaml)
      ↓
 Argo CD detects OutOfSync
      ↓
@@ -29,7 +29,7 @@ Pod readiness checks & AWS ALB Target Health
 ## 📁 Repository Structure
 
 ```
-shopsphere-gitops/
+shopsphere-aws-scaling-gitops/
 ├── apps/                                   # Base Kubernetes manifests (environment-agnostic)
 │   ├── frontend-service/                   # Frontend Web Gateway & Auth UI
 │   │   ├── deployment.yaml
