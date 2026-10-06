@@ -13,13 +13,13 @@ resources:
 images:
   - name: shopsphere-frontend
     newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-frontend
-    newTag: v10.0-initial
+    newTag: v10.1-e260f7aa
   - name: shopsphere-product
     newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-product
-    newTag: v10.0-initial
+    newTag: v10.1-e260f7aa
   - name: shopsphere-order
     newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-order
-    newTag: v10.0-initial
+    newTag: v10.1-e260f7aa
   - name: shopsphere-user
     newName: 165772574557.dkr.ecr.us-east-1.amazonaws.com/shopsphere-stage9-user
-    newTag: v10.0-initial
+    newTag: v10.1-e260f7aa
