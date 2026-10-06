@@ -8,7 +8,7 @@ spec:
     name: frontend-service
     port: 8080
   targetType: instance
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-mono-tg/533c9bd7630dcfd8
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-mono-tg/b651be5f2dc931b4
 ---
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
@@ -20,7 +20,7 @@ spec:
     name: product-service
     port: 8081
   targetType: instance
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-prod-tg/09518e8c09a732d7
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-prod-tg/56fbcb210ef25dbf
 ---
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
@@ -32,7 +32,7 @@ spec:
     name: order-service
     port: 8082
   targetType: instance
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-ord-tg/9d938654923bb4d7
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-ord-tg/271747da6c5bbaba
 ---
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
@@ -44,4 +44,4 @@ spec:
     name: user-service
     port: 8083
   targetType: instance
-  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-user-tg/2ddd7b866a88590a
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:165772574557:targetgroup/shopsphere-stage9-eks-user-tg/93be66b8af8d801e
